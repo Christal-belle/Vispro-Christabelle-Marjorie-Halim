@@ -3,7 +3,7 @@ class MenuItem {
   final int price;
   final double? discountPercent;
 
-  MenuItem({
+  MenuItem(String name, {
     required this.name,
     required this.price,
     this.discountPercent,

@@ -1,0 +1,1 @@
+Text hanya bertanggung jawab menampilkan hal-hal yang berhubungan dengan gaya tulisannya. Sedangkan center bukanlah propertinya text karena center dapat mengatur widget. Masing-masing memiliki tugasnya tersendiri sehingga menerapkan single responsibility.
