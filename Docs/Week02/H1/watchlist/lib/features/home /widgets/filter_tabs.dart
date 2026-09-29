@@ -12,7 +12,7 @@ class FilterTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final filters = ["All", "Watching", "Completed", "Plan"];
+    final filters = const["All", "Watching", "Completed", "Plan"];
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
