@@ -14,6 +14,7 @@
 
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'home.dart';
 import 'app.dart';
 
 void main() => runApp(const ShrineApp());
@@ -28,9 +29,7 @@ class ShrineApp extends StatelessWidget {
       initialRoute: '/login',
       routes: {
         '/login': (context) => const LoginPage(),
-        '/': (context) => const Scaffold(
-              body: Center(child: Text('Home Screen')),
-            ),
+        '/': (context) => const HomePage(),
       },
     );
   }
