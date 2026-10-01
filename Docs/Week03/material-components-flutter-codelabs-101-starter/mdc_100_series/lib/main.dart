@@ -13,24 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'login.dart';
-import 'home.dart';
 import 'app.dart';
 
 void main() => runApp(const ShrineApp());
 
-class ShrineApp extends StatelessWidget {
-  const ShrineApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Shrine',
-      initialRoute: '/login',
-      routes: {
-        '/login': (context) => const LoginPage(),
-        '/': (context) => const HomePage(),
-      },
-    );
-  }
-}
