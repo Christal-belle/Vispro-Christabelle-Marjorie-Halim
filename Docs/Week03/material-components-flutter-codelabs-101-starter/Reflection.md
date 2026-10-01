@@ -1,0 +1,5 @@
+1. Design Systems (ThemeData):
+Penggunaan ThemeData menyederhanakan pembaruan visual secara global karena memusatkan seluruh konfigurasi gaya seperti warna, tipografi, dan bentuk di dalam satu objek tema utama pada MaterialApp. Widget anak akan mewarisi properti ini secara otomatis, sehingga perubahan desain cukup dilakukan sekali di tingkat pusat tanpa perlu mengubah kode secara manual pada setiap widget individual.
+
+2. State & Animation (Backdrop MDC-104):
+Dalam widget Backdrop, state dikelola menggunakan AnimationController untuk mengontrol posisi dan pergerakan antara lapisan depan (front layer) dan lapisan menu belakang (back layer). Saat tombol menu ditekan, fungsi pengendali memicu metode fling() guna mengubah nilai animasi. Perubahan nilai state ini menggerakkan PositionedTransition pada lapisan depan serta menyinkronkan transisi opasitas dan posisi pada ikon serta teks judul secara mulus.
