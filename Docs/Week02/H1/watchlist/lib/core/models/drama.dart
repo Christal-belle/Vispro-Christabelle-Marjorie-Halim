@@ -32,5 +32,5 @@ String formatDuration(int minutes) {
   final h = minutes ~/ 60;
   final m = minutes % 60;
   if (h == 0) return '${m}m';
-  return '${h}j ${m}m';
+  return '${h}h ${m}m';
 }

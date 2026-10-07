@@ -55,6 +55,13 @@ class AppTheme {
         checkmarkColor: accentColor,
         labelStyle: const TextStyle(fontWeight: FontWeight.w500),
       ),
+      segmentedButtonTheme: SegmentedButtonThemeData(
+        style: SegmentedButton.styleFrom(
+          selectedBackgroundColor: accentColor,
+          selectedForegroundColor: onAccent,
+          side: BorderSide(color: Colors.white.withValues(alpha: 0.12)),
+        ),
+      ),
     );
   }
 }

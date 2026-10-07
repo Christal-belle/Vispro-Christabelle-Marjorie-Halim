@@ -31,20 +31,34 @@ class DramaCard extends StatelessWidget {
                 Positioned(
                   top: 8,
                   left: 8,
-                  child: _Badge(
-                    label: drama.status,
-                    background: scheme.primary,
-                    foreground: AppTheme.onAccent,
+                  child: Chip(
+                    label: Text(drama.status),
+                    backgroundColor: statusColor,
+                    labelStyle: text.labelSmall?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: AppTheme.onAccent,
+                    ),
+                    side: BorderSide.none,
+                    visualDensity: VisualDensity.compact,
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    padding: EdgeInsets.zero,
                   ),
                 ),
                 if (drama.rating != null)
                   Positioned(
                     top: 8,
                     right: 8,
-                    child: _Badge(
-                      label: '★ ${drama.rating!.toStringAsFixed(1)}',
-                      background: Colors.black54,
-                      foreground: AppTheme.ratingColor,
+                    child: Chip(
+                      label: Text('★ ${drama.rating!.toStringAsFixed(1)}'),
+                      backgroundColor: Colors.black54,
+                      labelStyle: text.labelSmall?.copyWith(
+                        fontWeight: FontWeight.w600,
+                        color: AppTheme.ratingColor,
+                      ),
+                      side: BorderSide.none,
+                      visualDensity: VisualDensity.compact,
+                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      padding: EdgeInsets.zero,
                     ),
                   ),
               ],
@@ -75,15 +89,14 @@ class DramaCard extends StatelessWidget {
                   ),
                 ],
                 const SizedBox(height: 10),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
-                  child: LinearProgressIndicator(
+                LinearProgressIndicator(
+                    borderRadius: BorderRadius.circular(4),
                     value: drama.progress,
                     minHeight: 6,
                     color: statusColor,
                     backgroundColor: scheme.surfaceContainerHighest,
                   ),
-                ),
+    
                 const SizedBox(height: 6),
                 Text(
                   '${drama.watchedEpisodes}/${drama.episodes} eps'
@@ -95,35 +108,6 @@ class DramaCard extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _Badge extends StatelessWidget {
-  final String label;
-  final Color background;
-  final Color foreground;
-  const _Badge({
-    required this.label,
-    required this.background,
-    required this.foreground,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: BoxDecoration(
-        color: background,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Text(
-        label,
-        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              fontWeight: FontWeight.w600,
-              color: foreground,
-            ),
       ),
     );
   }

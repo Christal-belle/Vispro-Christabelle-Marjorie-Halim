@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:watchlist/core/theme/app_theme.dart';
 
 class FilterTabs extends StatelessWidget {
   final String selected;
-  final Function(String) onChanged;
+  final ValueChanged<String> onChanged;
 
   const FilterTabs({
     super.key,
@@ -11,32 +10,21 @@ class FilterTabs extends StatelessWidget {
     required this.onChanged,
   });
 
+  static const _filters = ["All", "Watching", "Completed", "Plan"];
+
   @override
   Widget build(BuildContext context) {
-    final filters = const["All", "Watching", "Completed", "Plan"];
-
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: filters.map((f) {
-        final isSelected = selected == f;
-        final color = AppTheme.statusColor(f);
-
-        return ChoiceChip(
-          label: Text(f),
-          selected: isSelected,
-          showCheckmark: false,
-          selectedColor: color,
-          backgroundColor: Colors.transparent,
-          side: BorderSide(
-            color: isSelected ? color : color.withValues(alpha: 0.5),
-          ),
-          labelStyle: TextStyle(
-            fontWeight: FontWeight.w600,
-            color: isSelected ? AppTheme.onAccent : color,
-          ),
-          onSelected: (_) => onChanged(f),
-        );
-      }).toList(),
+    return Padding(
+     padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: SegmentedButton<String>(
+        showSelectedIcon: false,
+        segments: [
+          for (final f in _filters)
+            ButtonSegment<String>(value: f, label: Text(f)),
+        ],
+        selected: {selected},
+        onSelectionChanged: (s) => onChanged(s.first),
+      ),
     );
   }
 }

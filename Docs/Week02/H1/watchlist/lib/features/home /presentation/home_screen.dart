@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
       year: 2026,
       episodes: 8,
       watchedEpisodes: 4,
-      rating: 8.8,
+      rating: 8,
       episodeDuration: 55,
       genre: "Fantasy",
       tropes: ["Superpower", "Found Family"],
