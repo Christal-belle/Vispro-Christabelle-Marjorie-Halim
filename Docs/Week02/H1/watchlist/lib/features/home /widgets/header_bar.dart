@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeaderBar extends StatelessWidget implements PreferredSizeWidget {
   const HeaderBar({super.key});
@@ -6,7 +7,15 @@ class HeaderBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text("Drama Watchlist"),
+      centerTitle: true,
+      title: Text(
+        "Drama Watchlist",
+        style: GoogleFonts.playfairDisplay(
+          fontSize: 26,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0.5,
+        ),
+      ),
     );
   }
 

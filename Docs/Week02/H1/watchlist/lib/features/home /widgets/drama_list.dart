@@ -18,11 +18,16 @@ class DramaList extends StatelessWidget {
       );
     }
 
-    return ListView.builder(
+    return GridView.builder(
+      padding: const EdgeInsets.all(16),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 12,
+        mainAxisSpacing: 12,
+        childAspectRatio: 0.62,
+      ),
       itemCount: dramas.length,
-      itemBuilder: (context, index) {
-        return DramaCard(drama: dramas[index]);
-      },
+      itemBuilder: (context, index) => DramaCard(drama: dramas[index]),
     );
   }
 }

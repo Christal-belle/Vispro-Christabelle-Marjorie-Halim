@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watchlist/core/theme/app_theme.dart';
 
 class FilterTabs extends StatelessWidget {
   final String selected;
@@ -17,9 +18,22 @@ class FilterTabs extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: filters.map((f) {
+        final isSelected = selected == f;
+        final color = AppTheme.statusColor(f);
+
         return ChoiceChip(
           label: Text(f),
-          selected: selected == f,
+          selected: isSelected,
+          showCheckmark: false,
+          selectedColor: color,
+          backgroundColor: Colors.transparent,
+          side: BorderSide(
+            color: isSelected ? color : color.withValues(alpha: 0.5),
+          ),
+          labelStyle: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: isSelected ? AppTheme.onAccent : color,
+          ),
           onSelected: (_) => onChanged(f),
         );
       }).toList(),

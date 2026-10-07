@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watchlist/features/home /presentation/home_screen.dart';
+import 'core/theme/app_theme.dart';
 
 class DramaWatchlistApp extends StatelessWidget {
   const DramaWatchlistApp({super.key});
@@ -9,10 +10,10 @@ class DramaWatchlistApp extends StatelessWidget {
     return MaterialApp(
       title: 'Drama Watchlist',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.pink,
-      ),
+      theme: AppTheme.darkTheme,
+      themeMode: ThemeMode.dark,
+      darkTheme: AppTheme.darkTheme,
+      
       home: const HomeScreen(),
     );
   }
