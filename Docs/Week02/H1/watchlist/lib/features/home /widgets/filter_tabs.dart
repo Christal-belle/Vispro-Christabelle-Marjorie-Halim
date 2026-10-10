@@ -14,17 +14,18 @@ class FilterTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-     padding: const EdgeInsets.symmetric(horizontal: 16),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: SegmentedButton<String>(
         showSelectedIcon: false,
         segments: [
           for (final f in _filters)
             ButtonSegment<String>(value: f, label: Text(f)),
-        ],
-        selected: {selected},
-        onSelectionChanged: (s) => onChanged(s.first),
-      ),
+          ],
+          selected: {selected},
+          onSelectionChanged: (Set<String> s) => onChanged(s.first),
+        ),
     );
   }
 }

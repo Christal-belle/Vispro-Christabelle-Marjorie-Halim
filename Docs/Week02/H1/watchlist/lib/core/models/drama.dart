@@ -9,6 +9,7 @@ class Drama {
   final double? rating;
   final List<String> tropes;
   final int episodeDuration; 
+  final String synopsis;
 
   Drama({
     required this.title,
@@ -21,6 +22,7 @@ class Drama {
     this.tropes = const [],
     this.episodeDuration = 60,
     this.genre = '',
+    required this.synopsis,
   });
 
   int get unwatchedEpisodes => episodes - watchedEpisodes;
