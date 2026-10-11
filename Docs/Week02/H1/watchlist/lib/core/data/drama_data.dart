@@ -36,7 +36,7 @@ final List<Drama> kDramas = [
     episodes: 16,
     watchedEpisodes: 1,
     rating: 10,
-    episodeDuration: 35-55,
+    episodeDuration: 45,
     genre: "Action",
     tropes: ["Weak to Strong", "High School Drama", ],
     synopsis: "Yeon Si-eun is a quiet, top-performing student who appears physically weak. When he becomes a target of school bullying, he uses his intelligence, analytical skills, and strategic thinking to fight back against his stronger opponents. Along the way, he forms friendships with Ahn Su-ho and Oh Beom-seok. However, school violence, emotional struggles, and conflicts between friends gradually test their loyalty and threaten to destroy their bond.",
