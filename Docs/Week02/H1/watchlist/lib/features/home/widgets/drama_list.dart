@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watchlist/core/models/drama.dart';
-import 'package:watchlist/features/home /widgets/drama_card.dart';
+import 'package:watchlist/features/home/widgets/drama_card.dart';
 
 class DramaList extends StatelessWidget {
   final List<Drama> dramas;

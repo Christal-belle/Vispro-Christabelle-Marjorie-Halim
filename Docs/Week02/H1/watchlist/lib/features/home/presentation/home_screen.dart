@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:watchlist/core/data/drama_data.dart';
-import 'package:watchlist/features/home /widgets/drama_list.dart';
-import 'package:watchlist/features/home /widgets/header_bar.dart';
+import 'package:watchlist/features/home/widgets/drama_list.dart';
+import 'package:watchlist/features/home/widgets/header_bar.dart';
 import 'package:watchlist/core/models/drama.dart';
-import 'package:watchlist/features/home /widgets/stats_card.dart';
+import 'package:watchlist/features/home/widgets/stats_card.dart';
 import 'package:watchlist/core/layout/breakpoints.dart';
-import 'package:watchlist/features/home /presentation/detail_screen.dart';
-import 'package:watchlist/features/home /presentation/filter_screen.dart';
-import 'package:watchlist/features/home /widgets/empty_state.dart';
+import 'package:watchlist/features/home/presentation/detail_screen.dart';
+import 'package:watchlist/features/home/presentation/filter_screen.dart';
+import 'package:watchlist/features/home/widgets/empty_state.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Drama>? dramas;
@@ -122,4 +122,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
- 

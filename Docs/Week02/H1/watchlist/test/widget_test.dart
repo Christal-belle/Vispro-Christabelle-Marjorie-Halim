@@ -5,10 +5,10 @@ import 'package:watchlist/core/data/drama_data.dart';
 import 'package:watchlist/core/layout/breakpoints.dart';
 import 'package:watchlist/core/models/drama.dart';
 import 'package:watchlist/core/theme/app_theme.dart';
-import 'package:watchlist/features/home /presentation/detail_screen.dart';
-import 'package:watchlist/features/home /presentation/filter_screen.dart';
-import 'package:watchlist/features/home /presentation/home_screen.dart';
-import 'package:watchlist/features/home /widgets/drama_card.dart';
+import 'package:watchlist/features/home/presentation/detail_screen.dart';
+import 'package:watchlist/features/home/presentation/filter_screen.dart';
+import 'package:watchlist/features/home/presentation/home_screen.dart';
+import 'package:watchlist/features/home/widgets/drama_card.dart';
 
 const Size kSmallPhone = Size(320, 568);
 const Size kLargePhone = Size(430, 932);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:watchlist/core/layout/breakpoints.dart';
 import 'package:watchlist/core/models/drama.dart';
 import 'package:watchlist/core/theme/app_theme.dart';
-import 'package:watchlist/features/home /widgets/poster_image.dart';
+import 'package:watchlist/features/home/widgets/poster_image.dart';
 
 class DetailScreen extends StatelessWidget {
   final Drama drama;

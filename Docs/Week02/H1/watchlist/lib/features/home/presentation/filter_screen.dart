@@ -3,12 +3,12 @@ import 'package:watchlist/core/data/drama_data.dart';
 import 'package:watchlist/core/layout/breakpoints.dart';
 import 'package:watchlist/core/models/drama.dart';
 import 'package:watchlist/core/theme/app_theme.dart';
-import 'package:watchlist/features/home /presentation/detail_screen.dart';
-import 'package:watchlist/features/home /widgets/drama_list.dart';
-import 'package:watchlist/features/home /widgets/empty_state.dart';
-import 'package:watchlist/features/home /widgets/filter_tabs.dart';
-import 'package:watchlist/features/home /widgets/stats_card.dart';
-import 'package:watchlist/features/home /widgets/trope_filter.dart';
+import 'package:watchlist/features/home/presentation/detail_screen.dart';
+import 'package:watchlist/features/home/widgets/drama_list.dart';
+import 'package:watchlist/features/home/widgets/empty_state.dart';
+import 'package:watchlist/features/home/widgets/filter_tabs.dart';
+import 'package:watchlist/features/home/widgets/stats_card.dart';
+import 'package:watchlist/features/home/widgets/trope_filter.dart';
 
 class FilterScreen extends StatefulWidget {
   final List<Drama>? dramas;
